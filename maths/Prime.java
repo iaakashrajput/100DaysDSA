@@ -12,6 +12,7 @@ public class Prime {
 
     }
 
+    // This is a better solution specially for larger numbers
     static boolean isPrimeOptimized(int n) {
         if (n <= 1)
             return false;
@@ -31,9 +32,26 @@ public class Prime {
 
     }
 
+    static boolean isPrimeStriver(int n) {
+        int cnt = 0;
+        for (int i = 1; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                cnt++;
+                if ((n / i) != i) {
+                    cnt++;
+                }
+
+            }
+        }
+        if (cnt == 2) {
+            return true;
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
-        int n = 121;
-        if (isPrimeOptimized(n)) {
+        int n = 131;
+        if (isPrimeStriver(n)) {
             System.out.println(n + " is a prime number");
         } else {
             System.out.println(n + " is not a prime number");
