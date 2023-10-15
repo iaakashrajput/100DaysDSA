@@ -3,6 +3,7 @@ public class CountSetBits {
     static int countBits(int n) {
         int res = 0;
         while (n != 0) {
+            System.out.println(n & 1);
             if ((n & 1) == 1) {
                 res++;
             }
