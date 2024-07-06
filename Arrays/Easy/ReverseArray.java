@@ -11,7 +11,6 @@ public class ReverseArray {
     }
 
     public static int[] optimalReverse(int[] arr) {
-        // int reversedArr[] = new int[arr.length];
         int start = 0;
         int end = arr.length - 1;
         while (start < end) {
@@ -21,7 +20,6 @@ public class ReverseArray {
 
             start++;
             end--;
-
         }
         return arr;
     }
