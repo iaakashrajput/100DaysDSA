@@ -1,6 +1,7 @@
 package Arrays.Easy;
 
 public class ReverseArray {
+    
     public static int[] bruteForceReverse(int[] arr) {
         int n = arr.length;
         int reversedArr[] = new int[arr.length];
